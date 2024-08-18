@@ -1,11 +1,30 @@
 import { Navbar, NavbarBrand } from "@nextui-org/react";
-import '../styles/navBar.css'; // Import the CSS file
 
 export default function AppNavbar() {
+  const navbarStyle = {
+    height: '80px',
+    display: 'flex',
+    width: '100%',
+    backdropFilter: 'none',
+    borderBottom: '1px solid #ccc',
+    backgroundColor: 'transparent',
+    zIndex: 15,
+    position: 'fixed'
+  };
+
+  const navbarBrandStyle = {
+    padding: '10px',
+    color: 'white'
+  };
+
+  const textStyle = {
+    letterSpacing: '0.2em'
+  };
+
   return (
-    <Navbar className="custom-navbar" position="fixed">
-      <NavbarBrand style={{ padding: '10px', color: 'white' }}>
-      <p className="font-bold text-inherit text-4xl" style={{ letterSpacing: '0.2em' }}>KABYLAKE</p> 
+    <Navbar style={navbarStyle}>
+      <NavbarBrand style={navbarBrandStyle}>
+        <p className="font-bold text-inherit text-4xl" style={textStyle}>KABYLAKE</p> 
       </NavbarBrand>
     </Navbar>
   );
