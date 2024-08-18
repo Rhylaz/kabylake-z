@@ -35,7 +35,10 @@
       "@/*": ["./*"]
     },
     // Specify type definitions to include
-    "types": ["@types/prop-types"]
+    "types": ["prop-types", "react"],
+    // Add typeRoots to include custom types
+    "typeRoots": ["./node_modules/@types", "./types"],
+    "jsxImportSource": "react" // Add this if using a library like @emotion/react
   },
   // Specify files to include in the compilation
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

@@ -1,0 +1,7 @@
+.custom-navbar {
+    height: 80px; /* Set your desired height */
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+}
+
