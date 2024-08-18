@@ -13,35 +13,47 @@ export default function CookingPage() { // Renamed component
   return (
       <main className="flex min-h-screen flex-col items-center justify-between" style={{ padding: 0 }}>
         {/* Navigation bar would be here */}
-        <div className="image-container">
+        <div className="video-container">
+          <video src="/kabylakeIntroV3.mp4" autoPlay muted loop className="video-player"></video> {/* Added loop attribute */}
+        </div>
+        <div className="image-row-container"> {/* New container for row layout */}
           <div className="image-wrapper">
-            <Image src="/setupkb.png" alt="Setup KB" className="border-grey" fill sizes="100vw 100%" />
+            <Image src="/missiles.png" alt="Missiles" className="border-grey" layout="responsive" width={100} height={100} />
           </div>
           <div className="image-wrapper">
-            <Image src="/missiles.png" alt="Missiles" className="border-grey" fill sizes="100vw 100%" />
+            <Image src="/dronekb.png" alt="Drone KB" className="border-grey" layout="responsive" width={100} height={100} />
           </div>
           <div className="image-wrapper">
-            <Image src="/dronekb.png" alt="Drone KB" className="border-grey" fill sizes="100vw 100%" />
-          </div>
-          <div className="image-wrapper">
-            <Image src="/dexterinspo.png" alt="Dexter Inspo" className="border-grey" fill sizes="100vw 100%" />
+            <Image src="/dexterinspo.png" alt="Dexter Inspo" className="border-grey" layout="responsive" width={100} height={100} />
           </div>
         </div>
         <style jsx>{`
-          .image-container {
+          .video-container {
             width: 100%;
             display: flex;
-            flex-direction: column;
-            align-items: center; /* Center images horizontally */
+            justify-content: center;
+            margin-bottom: 20px; /* Adjust spacing as needed */
+          }
+          .video-player {
+            width: 100%; /* Make video take full width */
+            height: auto;
+          }
+          .image-row-container { /* New styles for row layout */
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center; /* Center images horizontally */
+            padding: 0 10px; /* Add padding between images */
           }
           .image-wrapper {
-            position: relative; /* Required for fill prop */
-            width: 100vw; /* Adjusted to take up 100% of viewport width */
-            height: 100%;
-            padding-bottom: 60%; /* Adjust based on aspect ratio */
+            position: relative; /* Required for responsive layout */
+            width: 25%; /* Adjusted to take up 25% of the container width */
+            height: auto; /* Maintain aspect ratio */
+            padding-bottom: 0; /* Remove padding-bottom */
             display: flex;
             justify-content: center; /* Center images horizontally */
             align-items: center; /* Center images vertically */
+            margin: 0 10px; /* Add horizontal padding between images */
           }
           .image-container :global(img.border-grey) { // Changed class name and color
             border: 2px solid grey;

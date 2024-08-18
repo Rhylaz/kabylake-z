@@ -3,7 +3,6 @@ import "../globals.css";
 import AppNavbar from "../components/hadiNavbar"; // Import the Navbar component
 import AppFooter from "../components/hadiFooter";
 
-
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
@@ -18,7 +17,9 @@ export default function RootLayout({
           <AppNavbar />
         </div>
         {children}
-        <AppFooter /> {/* Added Footer component */}
+        <div style={{ marginTop: '20px' }}> {/* Added margin above the footer */}
+          <AppFooter />
+        </div>
       </body>
     </html>
   );
