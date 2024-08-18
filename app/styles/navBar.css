@@ -1,7 +1,10 @@
 .custom-navbar {
     height: 80px; /* Set your desired height */
     display: flex;
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
+    width: 100%; /* Make the navbar full width */
+    backdrop-filter: none; /* Remove any blur effect */
+    border-bottom: 1px solid #ccc; /* Add a border at the bottom */
+    background-color: transparent; /* Make the navbar transparent */
+    z-index: 15; /* Ensure navbar is on top */
+    position: fixed; /* Ensure the navbar is fixed at the top */
 }
-
