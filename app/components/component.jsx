@@ -1,8 +1,8 @@
-// App.js
+// Component.js
 import React from 'react';
-import Greeting from './Greeting';
+import Greeting from 'Greeting';
 
-function App() {
+function Component() {
   return (
     <div>
       <Greeting name="Marcelo" />
@@ -11,4 +11,4 @@ function App() {
   );
 }
 
-export default App;
+export default Component;
